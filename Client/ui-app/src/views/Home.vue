@@ -148,8 +148,8 @@ a {text-decoration: none; color: black}
   width:285px;
   height:280px;
   background-color: navajowhite;
-  position: absolute;
-  bottom: 15px;
+  position: fixed;
+  bottom: 5px;
   left: 0;
   right: 0;
   margin: auto;
@@ -221,18 +221,16 @@ a {text-decoration: none; color: black}
 
   .detail {
     width: 270px;
-    bottom: 30px;
   }
 }
 
 @media only screen and (min-width: 768px) {
   #map {
-    height: 800px;
+    height: 700px;
   }
 
   .detail {
     width: 300px;
-    bottom: 80px;
   }
 }
 
@@ -243,7 +241,7 @@ a {text-decoration: none; color: black}
 
   .detail {
     width: 320px;
-    bottom: 100px;
+    bottom: 50px;
   }
 }
 
