@@ -1,4 +1,6 @@
 *.pyc
 /venv/
+dist/
+*/*/dist/
 .idea
 __pycache__/

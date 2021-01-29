@@ -9,7 +9,7 @@
         </button>
       </div>
 
-      <form class="booking-form">
+      <form class="booking-form" autocomplete="off">
         <div class="form-group">
           <label for="name">Name</label>
           <input v-model="booking.name" type="text" class="form-control" id="name" aria-describedby="emailHelp" placeholder="Enter Name">
@@ -30,12 +30,12 @@
         </div>
         <div class="form-group">
           <label for="arrivalTime">Arrival Time</label>
-          <input v-model="booking.arrival_time" id="arrivalTime" type="text" class="form-control" >
+          <input v-model="booking.arrival_time" autocomplete="off" id="arrivalTime" type="text" class="form-control" >
           <small id="arrivalTimeHelp" class="form-text text-muted errors" v-show="showErrors">{{bookingErrors.arrival_time}}</small>
         </div>
         <div class="form-group">
           <label for="departureTime">Departure Time</label>
-          <input v-model="booking.departure_time" type="text" class="form-control" id="departureTime">
+          <input v-model="booking.departure_time" autocomplete="off" type="text" class="form-control" id="departureTime">
           <small id="departureTimeHelp" class="form-text text-muted errors" v-show="showErrors">{{bookingErrors.departure_time}}</small>
         </div>
         <div class="form-group">
@@ -56,7 +56,7 @@ import 'jquery-datetimepicker'
 
 const $ = require('jquery');
 const axios = require('axios');
-const apiURL = 'http://127.0.0.1:8004/api/' // Api URL Hard Coded: Change later
+const apiURL = 'https://lhome.herokuapp.com/api/' // Api URL Hard Coded: Change later
 
 
 export default {
@@ -91,8 +91,8 @@ export default {
   },
   mounted() {
     this.booking.title = this.title;
-    $('#arrivalTime').datetimepicker({format:'Y-m-d(G:i:s)'});
-    $('#departureTime').datetimepicker({format:'Y-m-d(G:i:s)'});
+    $('#arrivalTime').datetimepicker({format:'Y-m-d(G:i:00)'});
+    $('#departureTime').datetimepicker({format:'Y-m-d(G:i:00)'});
   },
   methods: {
     submitForm(event) {
