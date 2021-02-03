@@ -42,7 +42,9 @@ Rest API
 - CD into Client/ui-app
 - Do `npm install`
 - Do `npm run serve`
-- Make sure rest api is running already at `http://127.0.0.1:8004/api/` if its running at different url then change it in Booking.vue
+- Add Google Maps Javascript API key in `utils/gmaps.js` file
+- Make sure rest api is running already at `<locahost:port>/api/` or some other host
+- And Update the api url in Booking.vue
 
 Following are the screen shots for mobile, tab views and booking form
 
