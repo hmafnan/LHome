@@ -16,10 +16,11 @@ through open end points to create and view hotel bookings.
 
 ### Instruction to Setup
 - CD into Api
-- Create virtual environment by using python 3.5
-- Activate newly created virtual environment
+- if pip3 is not installed use this command `sudo apt-get install python3-pip`
+- Create virtual environment by using python 3 with command `virtualenv -p python3 venv`
+- Activate newly created virtual environment with command `source venv/bin/activate`
 - At the root do `pip install -r requirements.txt`
-- `python manage.py makemigration`
+- `python manage.py makemigrations`
 - `python manage.py migrate`
 - if needed create superuser `python manage.py createsuperuser`
 - And run server `python manage.py runserver 8084`
